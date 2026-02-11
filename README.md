@@ -7,9 +7,7 @@ Try it out at [tryrendezvous.me](https://tryrendezvous.me)!
 (For viewing pre-filled mock data, use username: Alice, password: password123)
 
 <img width="196.5" height="432.5" alt="Dashboard screenshot - A screen showing a list of groups, with a profile settings option" src="readme-assets/screenshots/Dashboard (groups & setting).png" />
-
 <img width="196.5" height="432.5" alt="Bucket List screenshot - A screen showing a list of activities" src="readme-assets/screenshots/Bucket List.png" />
-
 <img width="196.5" height="432.5" alt="Memories screenshot - A screen showing a list of memories for activities" src="readme-assets/screenshots/Memories.png" />
 
 
