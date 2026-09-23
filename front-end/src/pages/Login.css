@@ -108,6 +108,7 @@
 .login-bottom-text {
 	margin-top: 1.5rem;
 	animation: fadeInUp 0.4s ease-out 0.2s both;
+	text-align: center;
 }
 
 .login-bottom-text a {

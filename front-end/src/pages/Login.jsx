@@ -62,7 +62,11 @@ function Login() {
 			</form>
 
 			<p className="login-bottom-text">
-				Don’t have an account? <a href="/register">Sign up</a>
+				Don’t have an account? <br></br>
+				<a href="/register">Sign up</a>, or{" "}
+				<a href="#" onClick={(e) => { setUsername("Alice"); setPassword("password123"); handleLogin(e); }}>
+					try a demo
+				</a>
 			</p>
 		</div>
 	);
