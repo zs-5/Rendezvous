@@ -10,7 +10,7 @@ function Login() {
 	const [error, setError] = useState("");
 	const navigate = useNavigate();
 
-	const handleLogin = async (e) => {
+	const handleLogin = async (e, usernameValue = username, passwordValue = password) => {
 		e.preventDefault();
 
 		try {
@@ -18,13 +18,13 @@ function Login() {
 			const response = await fetch(`${backendURL}/api/login`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ username, password }),
+				body: JSON.stringify({ username: usernameValue, password: passwordValue }),
 			});
 
 			const responseData = await response.json();
 
 			if (responseData.redirect) {
-				sessionStorage.setItem("username", username);
+				sessionStorage.setItem("username", usernameValue);
 				navigate(responseData.redirect);
 				return;
 			}
@@ -64,7 +64,7 @@ function Login() {
 			<p className="login-bottom-text">
 				Don’t have an account? <br></br>
 				<a href="/register">Sign up</a>, or{" "}
-				<a href="#" onClick={(e) => { setUsername("Alice"); setPassword("password123"); handleLogin(e); }}>
+				<a href="#" onClick={(e) => handleLogin(e, "Alice", "password123")}>
 					try a demo
 				</a>
 			</p>
